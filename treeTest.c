@@ -33,6 +33,6 @@ void test_insert_child_node_to_random_parent_in_tree(){
 	it = getChildren(tree, &_10);
 	ASSERT(insertTreeNode(tree, &_10,NULL));
 	ASSERT(insertTreeNode(tree, &_20, &_10));
-	ASSERT(insertTreeNode(tree, &_30, &_10));
+	ASSERT(insertTreeNode(tree, &_30, &_20));
 
 }

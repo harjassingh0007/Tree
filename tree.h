@@ -17,4 +17,5 @@ Tree* createTree(CompareFunc* compare);
 int insertTreeNode(Tree* tree,void* data,void* parentData);
 Iterator getChildren(Tree* tree, void* parentData);
 
+
 void disposeTree(Tree* tree);
