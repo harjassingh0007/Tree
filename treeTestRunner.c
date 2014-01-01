@@ -49,24 +49,9 @@ int main(){
 	fixtureSetup();
 	resetTestCount();
 
-	testStarted("test_insert_root_node_in_tree");
+	testStarted("test_insert_root_node");
 	setup();
-		test_insert_root_node_in_tree();
-	tearDown();
-	testEnded();
-	testStarted("test_insert_child_node_to_root_in_tree");
-	setup();
-		test_insert_child_node_to_root_in_tree();
-	tearDown();
-	testEnded();
-	testStarted("test_insert_two_child_node_to_root_in_tree");
-	setup();
-		test_insert_two_child_node_to_root_in_tree();
-	tearDown();
-	testEnded();
-	testStarted("test_insert_child_node_to_random_parent_in_tree");
-	setup();
-		test_insert_child_node_to_random_parent_in_tree();
+		test_insert_root_node();
 	tearDown();
 	testEnded();
 

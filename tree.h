@@ -1,21 +1,22 @@
-#include "../doublelist/doubleList.h"
+#include "treeIterator.h"
 
-typedef struct treeNode{
-	void * data;
-	struct treeNode* parentNode;
-	DoubleList* children;
-} TreeNode;
-
-typedef int CompareFunc(void* first,void* second);
-
-typedef struct{
-	TreeNode* root;
-	CompareFunc* compare;
+#ifndef _COMPARE_
+#define _COMPARE_
+typedef int (*cmpr)(void* firstElement, void* secondElement);
+#endif
+typedef struct {
+        compare cmp;
+        void *root;
 } Tree;
 
-Tree* createTree(CompareFunc* compare);
-int insertTreeNode(Tree* tree,void* data,void* parentData);
+typedef struct tn{
+        void* data;
+        struct tn* parent;
+        DoubleList children;
+} TreeNode;
+
+Tree createTree(cmpr cmp);
+int insertTree(Tree* tree, void* parentData, void* data);
 Iterator getChildren(Tree* tree, void* parentData);
-
-
-void disposeTree(Tree* tree);
+int deleteFromTree(Tree* tree, void* data);
+int searchInTree(Tree* tree, void* data);
