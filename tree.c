@@ -21,5 +21,11 @@ int insertTree(Tree* tree, void* parentData, void* childData) {
         tree->root = createTreeNode(childData, NULL);
         return 1;
     }
+    if(0 == tree->cmp(root->data,parentData)){
+        parentNode = root;
+        nodeToInsert = createTreeNode(childData, parentNode);
+        insert(&root->children, 0, nodeToInsert);
+        return 1;
+    }
     return 1;
 }

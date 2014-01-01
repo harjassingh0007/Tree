@@ -54,6 +54,16 @@ int main(){
 		test_insert_root_node();
 	tearDown();
 	testEnded();
+	testStarted("test_insert_node_at_different_levels");
+	setup();
+		test_insert_node_at_different_levels();
+	tearDown();
+	testEnded();
+	testStarted("test_insert_node_under_child_node");
+	setup();
+		test_insert_node_under_child_node();
+	tearDown();
+	testEnded();
 
 	summarizeTestCount();
 	fixtureTearDown();
