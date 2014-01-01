@@ -60,7 +60,19 @@ void test_get_children_from_two_different_(){
     ASSERT(4 == *(int*)result.next(&result));
 }
 
-void test_search_element_in_the_tree(){
+void test_search_element_in_the_tree_from_one_node(){
+    Tree tree = createTree(compareInteger);
+    Iterator result;
+    int data[5] = {1,2,3,4,5};
+    ASSERT(insertTree(&tree, NULL, &data[0]));
+    ASSERT(insertTree(&tree, &data[0], &data[1]));
+    ASSERT(insertTree(&tree, &data[1], &data[2]));
+    ASSERT(insertTree(&tree, &data[2], &data[3]));
+    ASSERT(insertTree(&tree, &data[3], &data[4]));
+    ASSERT(searchTreeNode(&tree,&data[4]));
+}
+
+void test_search_element_in_the_tree_from_different_nodes(){
     Tree tree = createTree(compareInteger);
     Iterator result;
     int data[5] = {1,2,3,4,5};
@@ -74,6 +86,14 @@ void test_search_element_in_the_tree(){
     ASSERT(searchTreeNode(&tree,&data[0]));
 }
 
+void test_search_element_when_not_found(){
+    Tree tree = createTree(compareInteger);
+    Iterator result;
+    int data[5] = {1,2};
+    ASSERT(insertTree(&tree, NULL, &data[0]));
+    ASSERT(insertTree(&tree, &data[0], &data[1]));
+    ASSERT(0 == searchTreeNode(&tree,&data[4]));
+}
 
 
 

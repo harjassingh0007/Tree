@@ -74,9 +74,19 @@ int main(){
 		test_get_children_from_two_different_();
 	tearDown();
 	testEnded();
-	testStarted("test_search_element_in_the_tree");
+	testStarted("test_search_element_in_the_tree_from_one_node");
 	setup();
-		test_search_element_in_the_tree();
+		test_search_element_in_the_tree_from_one_node();
+	tearDown();
+	testEnded();
+	testStarted("test_search_element_in_the_tree_from_different_nodes");
+	setup();
+		test_search_element_in_the_tree_from_different_nodes();
+	tearDown();
+	testEnded();
+	testStarted("test_search_element_when_not_found");
+	setup();
+		test_search_element_when_not_found();
 	tearDown();
 	testEnded();
 
