@@ -68,3 +68,18 @@ Iterator getChildren(Tree* tree, void *parent) {
     return it;
 }
 
+int searchTreeNode(Tree* tree, void* data){
+    TreeNode* root = (TreeNode*)(tree->root);
+    if(0 == tree->cmp(data,root->data)){
+        return 1;
+    }
+    if(getTreeNode(root->children,data,tree->cmp))
+       return 1;
+    return 0;
+}
+
+
+
+
+
+

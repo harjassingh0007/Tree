@@ -59,3 +59,36 @@ void test_get_children_from_two_different_(){
     result = getChildren(&tree, &arr[2]);
     ASSERT(4 == *(int*)result.next(&result));
 }
+
+void test_search_element_in_the_tree(){
+    Tree tree = createTree(compareInteger);
+    Iterator result;
+    int data[5] = {1,2,3,4,5};
+    ASSERT(insertTree(&tree, NULL, &data[0]));
+    ASSERT(insertTree(&tree, &data[0], &data[1]));
+    ASSERT(insertTree(&tree, &data[1], &data[2]));
+    ASSERT(insertTree(&tree, &data[2], &data[3]));
+    ASSERT(insertTree(&tree, &data[3], &data[4]));
+    ASSERT(searchTreeNode(&tree,&data[4]));
+    ASSERT(searchTreeNode(&tree,&data[2]));
+    ASSERT(searchTreeNode(&tree,&data[0]));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

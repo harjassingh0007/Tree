@@ -74,6 +74,11 @@ int main(){
 		test_get_children_from_two_different_();
 	tearDown();
 	testEnded();
+	testStarted("test_search_element_in_the_tree");
+	setup();
+		test_search_element_in_the_tree();
+	tearDown();
+	testEnded();
 
 	summarizeTestCount();
 	fixtureTearDown();

@@ -19,4 +19,4 @@ Tree createTree(cmpr cmp);
 int insertTree(Tree* tree, void* parentData, void* data);
 Iterator getChildren(Tree* tree, void* parentData);
 int deleteFromTree(Tree* tree, void* data);
-int searchInTree(Tree* tree, void* data);
+int searchTreeNode(Tree* tree, void* data);
