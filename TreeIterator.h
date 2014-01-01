@@ -4,7 +4,7 @@ typedef struct {
         node* current;
         DoubleList* list;
 
-} Iterator;
+} TreeIterator;
 
-void* next(Iterator* it);
-int hasNext(Iterator* it);
+void* next(TreeIterator* it);
+int hasNext(TreeIterator* it);

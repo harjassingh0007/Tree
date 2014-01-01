@@ -1,3 +1,5 @@
+#include "../iterator/Iterator.h"
+
 typedef struct type{
 	void *data;
 	struct type *next;
@@ -19,3 +21,4 @@ int deleteList(DoubleList* dList,int index);
 void dispose(DoubleList dList);
 void* getData(DoubleList dList,void *searchElement,compare cmp);
 void sort(DoubleList dList, compare cmpFunc);
+Iterator dList_getIterator(DoubleList *dList);
